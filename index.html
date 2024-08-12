@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorify</title> 
+  <link rel="stylesheet" href="./index.css">
+	<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
+  <script src="./complex.js" defer></script>
+  <script src="./index.js" defer></script>
+</head>
+<body>
+
+<br>
+
+  <h1 id="Title">Input Your Continued Fraction</h1>
+        
+        <input type="data" id="input" value="1,2+i,3-2i,6" />
+        <button id="add-btn">Convergents</button>
+        <div id="random-output"></div>
+        <div id="demo"></div>
+      
+
+
+<!--
+
+        <h2>Your Options</h2>
+        <div id="options-list"></div>
+      
+        <button id="decide-btn"> Let's Decide! </button>
+        <div id="random-output"></div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+
+function continuedFraction(int a[], int size)
+{
+    double fraction = a[0];
+
+    for(int i = 1; i < size; i++)
+    { 
+        fraction = a[i] - (1/fraction);
+    }
+
+    return fraction;
+}
+
+
+function continuedfraction(a) {
+    var fraction;
+
+    for(int i = 1; i < size; i++)
+    { 
+        fraction = a[i] - (1/fraction);
+    }
+
+    return fraction;
+
+    while (x-a > eps*k*k) {
+        x = 1/(x-a);
+        a = Math.floor(x);
+        h2 = h1; h1 = h;
+        k2 = k1; k1 = k;
+        h = h2 + a*h1;
+        k = k2 + a*k1;
+    }
+
+    return h + "/" + k;
+}
+</script>
+
+<form id="frm1" action="/action_page.php">
+  Continued fraction period \(a_0,a_1,\ldots\): <input type="string" name="fname" value="1,2+I,3-2I"><br>
+  Number of convergents: <input type="text" name="lname" value="4"><br><br>
+</form> 
+
+  <input type="submit" value="Submit">
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+-->
+
+</body>
+</html>
