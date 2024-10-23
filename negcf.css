@@ -1,0 +1,31 @@
+
+.triangle-highlight {
+	fill: #ec008c;
+	opacity: 1;
+}
+.triangle-highlight3 {
+	fill: green;
+	opacity: .4;
+}
+.triangle-highlight2 {
+	fill: green;
+	opacity: .8;
+}
+.triangle-highlight4 {
+	fill: green;
+	opacity: .8;
+}
+
+
+table {
+  border: 1px solid #dddddd;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: center;
+  padding: 8px;
+}
+

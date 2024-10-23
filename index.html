@@ -1,98 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Negative cfs</title> 
-  <link rel="stylesheet" href="./index.css">
+  <title>Matty van Son</title> 
+  <link rel="stylesheet" href="index.css">
 	<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
-  <script src="./complex.js" defer></script>
-  <script src="./index.js" defer></script>
 </head>
-<body>
-
-<br>
-
-  <h1 id="Title">Input Your Continued Fraction</h1>
-        
-        <input type="data" id="input" value="1,2+i,3-2i,6" />
-        <button id="add-btn">Convergents</button>
-        <div id="random-output"></div>
-        <div id="demo"></div>
-      
+<body style="padding-left: 10px;">
 
 
 <!--
+<table width="748">
+<tr bgcolor="#e0e0e0">
+<td width=150>
+    <img width=250 src="footer-logo.png" alt="logo">
+</td>
 
-        <h2>Your Options</h2>
-        <div id="options-list"></div>
-      
-        <button id="decide-btn"> Let's Decide! </button>
-        <div id="random-output"></div>
+<td width=600>
+<div align="left" style="padding-left: 20px; padding-bottom: 10px; padding-top: 10px"  >
+    School of Mathematical Sciences, <br> University of Liverpool,<br>
+	Liverpool L69 7ZL,<br> United Kingdom<br>
 
-
-<script>
-function myFunction() {
-  var x = document.getElementById("frm1");
-  var text = "";
-  var i;
-  for (i = 0; i < x.length ;i++) {
-    text += x.elements[i].value + "<br>";
-  }
-  document.getElementById("demo").innerHTML = text;
-}
-
-
-function continuedFraction(int a[], int size)
-{
-    double fraction = a[0];
-
-    for(int i = 1; i < size; i++)
-    { 
-        fraction = a[i] - (1/fraction);
-    }
-
-    return fraction;
-}
-
-
-function continuedfraction(a) {
-    var fraction;
-
-    for(int i = 1; i < size; i++)
-    { 
-        fraction = a[i] - (1/fraction);
-    }
-
-    return fraction;
-
-    while (x-a > eps*k*k) {
-        x = 1/(x-a);
-        a = Math.floor(x);
-        h2 = h1; h1 = h;
-        k2 = k1; k1 = k;
-        h = h2 + a*h1;
-        k = k2 + a*k1;
-    }
-
-    return h + "/" + k;
-}
-</script>
-
-<form id="frm1" action="/action_page.php">
-  Continued fraction period \(a_0,a_1,\ldots\): <input type="string" name="fname" value="1,2+I,3-2I"><br>
-  Number of convergents: <input type="text" name="lname" value="4"><br><br>
-</form> 
-
-  <input type="submit" value="Submit">
-<p>Click "Try it" to display the value of each element in the form.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
+</div>
+</td>
+</tr>
+</table>
 -->
+
+
+<h3>Matty van Son</h3>
+
+
+<div class="tab-list">
+    <a href="#" class="tablink" onclick="openTab(event, 'Tab1')">Home</a>
+    <span class="separator">&bull;</span>
+    <a href="#" class="tablink" onclick="openTab(event, 'Tab2')">Research</a>
+    <span class="separator">&bull;</span>
+    <a href="#" class="tablink" onclick="openTab(event, 'Tab3')">Seminar and conferences</a>
+    <span class="separator">&bull;</span>
+    <a href="#" class="tablink" onclick="openTab(event, 'Tab4')">Apps</a>
+    <span class="separator">&bull;</span>
+    <a href="#" class="tablink" onclick="openTab(event, 'Tab5')">Contact</a>
+</div>
+
+
+<div id="Tab1" class="tab-content">
+    
+	<table width=800 cellspacing=10 cellpadding=3>
+
+	<tr bgcolor="#e0e0e0"><th>
+		Background
+	</th></tr>
+	<tr><td>	
+		
+	
+	<tr><td>	
+		I am a Postdoctoral Research Associate at <a href="https://www.open.ac.uk">The Open University</a>, working with Professor <a href="https://www.open.ac.uk/people/is3649">Ian Short</a>.
+	I am working on a project entitled "The Farey Framework", investigating the connections between SL\(_2\)-tilings and the Farey complex.
+	This work is closely connected to Conway Coxeter friezes and the theory of cluster algebras.	
+	</td></tr>
+
+	
+	<tr><td>	
+		My work is funded by EPSRC grant EP/W002817/1.
+	</td></tr>
+	
+	
+	
+	
+	<tr bgcolor="#e0e0e0"><th>
+		CV, research statement, and PhD-thesis
+	</th></tr>
+	
+	<tr><td>
+		I am currently working on problems in the intersection of number theory, combinatorics, and lattice and hyperbolic geometries: these include questions on frieze patterns, SL\(_2\)-tilings, and multidimensional continued fractions.
+	</td></tr>
+	
+	<tr><td>
+		I completed my PhD on <a href="https://en.wikipedia.org/wiki/Markov_number">Markov numbers</a> in 2021 under the supervision of <a href="https://pcwww.liv.ac.uk/~karpenk/">O. Karpenkov</a>.
+		My thesis is available as a pdf <a href="pdfs\Thesis.pdf">here</a>.
+		<br>
+		I obtained my undergraduate degree from NUI Maynooth (now <a href="https://www.maynoothuniversity.ie/mathematics-and-statistics">Maynooth University</a>).
+	</td></tr>
+	
+	<tr><td>
+	<!--
+		My <a href="pdfs\CV.pdf">CV (pdf)</a>, and 
+		<a href="pdfs\Statement-Research.pdf"> research statement (pdf)</a>, and
+		<a href="pdfs\Statement-Teaching.pdf"> teaching statement (pdf)</a>.
+		-->
+	</td></tr>
+			
+			
+			
+			
+			
+
+
+
+	</table>
+	
+</div>
+
+<div id="Tab2" class="tab-content">
+    <table width=800 cellspacing=10 cellpadding=3>
+	
+	
+	<tr bgcolor="#e0e0e0"><th> Research Interests
+		<a name="publications"></a>
+	 </th></tr>
+	<tr><td>
+	Research goes here...
+	</td></tr>
+	
+	<tr bgcolor="#e0e0e0"><th> Publications and Preprints
+		<a name="publications"></a>
+	 </th></tr>
+	<tr><td>
+			<b>Publications:</b>
+		
+		<ol type="1">
+		  <li>  Perron identity for arbitrary broken lines (2019). (<a href="https://jtnb.centre-mersenne.org/article/JTNB_2019__31_1_131_0.pdf" download="Perron identity for arbitrary broken lines"> read online </a>) (<a href="https://doi.org/10.5802/jtnb.1071" download="Perron identity for arbitrary broken lines"> doi) (<a href="https://arxiv.org/abs/1708.07396"> arXiv </a>) </li>
+		  <li>  Palindromic sequences of the Markov spectrum (2019). (<a href="https://rdcu.be/b8RyY" download="Palindromic sequences of the Markov spectrum"> read online </a>) (<a href="https://doi.org/10.1134/S0001434619090153" download="Perron identity for arbitrary broken lines"> doi) (<a href="https://arxiv.org/abs/1804.10802"> arXiv </a>) </li>
+		  <li>  Generalised Markov numbers (2020). (<a href="papers\gmn.pdf" download="Generalised Markov numbers"> read </a>) (<a href="https://doi.org/10.1016/j.jnt.2020.01.010" download="Perron identity for arbitrary broken lines"> doi) (<a href="https://arxiv.org/abs/1809.01688"> arXiv </a>) </li>
+		</ol>
+		
+		 <b>Preprints:</b> 
+		
+		<ol type="1">
+		  <li>  Uniqueness conjectures for extended Markov numbers (2020). (<a href="papers\ucemn.pdf" download="Uniqueness conjectures for extended Markov numbers"> read </a>) (<a href="https://arxiv.org/abs/1911.00746"> arXiv </a>) </li>
+		  
+		  <li>  Frieze patterns and Farey complexes (2024). (<a href="papers\fpafc.pdf" download="Frieze patterns and Farey complexes"> read </a>) (<a href="https://arxiv.org/abs/2312.12953"> arXiv </a>) </li>
+		  
+		  <li>  Geometry of multidimensional Farey summation algorithm and frieze patterns (2024). (<a href="papers\2410.13091v1.pdf" download="Geometry of multidimensional Farey summation algorithm and frieze patterns"> read </a>) (<a href="https://arxiv.org/abs/2410.13091"> arXiv </a>) </li>
+		</ol>
+		
+		
+	</td></tr>
+
+
+	<tr bgcolor="#e0e0e0"><th> Errata
+		<a name="Errata"></a>
+	 </th></tr>
+	<tr><td>
+			
+		Errata for the text <q>Generalised Markov numbers</q> (JNT, 2020) are available <a href="papers\Errata of gmn.pdf" download="Errata of gmn"> here </a>.
+		
+		
+	</td></tr>
+
+	</table>
+
+</div>
+
+<div id="Tab3" class="tab-content">
+    <table width=800 cellspacing=10 cellpadding=3>
+
+	
+	<tr bgcolor="#e0e0e0"><th>
+		Seminar
+	</th></tr>
+	<tr><td>	
+		
+		I hold an honorary research position at the University of Liverpool through which I coorganise a seminar entitled:
+		<br><a href="https://pcwww.liv.ac.uk/~mvanson/seminar.html">Selected Topics in Mathematics &#8211; Online Edition</a>
+		<br>My contact address for all things relating to the seminar is:
+		<br>m.van-son (at) liverpool.ac.uk
+
+	</td></tr>
+
+
+	</table>
+</div>
+
+<div id="Tab4" class="tab-content">
+    
+    <table width=800 cellspacing=10 cellpadding=3>
+	<tr bgcolor="#e0e0e0"><th>
+		Convergents calculator
+	</th></tr>
+	<tr><td>	
+		
+	</td></tr>
+	<tr><td>
+		Here is a small app for calculating the convergents of negative continued fractions.
+	</td></tr>
+	
+	</td></tr>
+	<tr><td>
+		
+		<input type="data" id="input" value="1,2+i,3-2i,6" />
+        <button id="add-btn">Convergents</button>
+        <div id="random-output"></div>
+        <div id="demo"></div>
+	</td></tr>
+
+	</table>
+</div>
+
+
+<div id="Tab5" class="tab-content">
+
+    <table width=800 cellspacing=10 cellpadding=3>
+	<tr bgcolor="#e0e0e0"><th>
+		Convergents calculator
+	</th></tr>
+	
+	<tr><td>
+    Here are my current contact details:
+		<br>matty.van-son (at) open.ac.uk
+		<br>m.van-son (at) liverpool.ac.uk
+	</td></tr>
+	
+	<tr><td>
+    School of Mathematics &#38; Statistics
+	<br>The Open University
+	<br>Milton Keynes
+	<br>MK7 6AA
+	<br>United Kingdom
+	</td></tr>
+	
+	
+	</table>
+</div>
+
+<!--
+<div id="Tab4" class="tab-content">
+    <h3>Tab 4 Content</h3>
+    <p>This is the content for Tab 4.</p>
+</div>
+-->
+
+<script src="index.js"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
+<script src="./complex.js" defer></script>
+<script src="./negcf.js" defer></script>
+
 
 </body>
 </html>
+

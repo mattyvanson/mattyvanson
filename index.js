@@ -1,119 +1,50 @@
+// Function to open the desired tab
+function openTab(event, tabName) {
+    var i, tabcontent, tablinks;
 
-var input = document.getElementById("input");
-var addBtn = document.getElementById("add-btn");
-var display = document.getElementById("options-list");
-var resultDisplay = document.getElementById("random-output");
-
-
-addBtn.addEventListener("click", convergents);
-
-
-function convergents() {
-	
-	
-	var inputArr = [];
-    inputArr.push(input.value);
-	const array2 = inputArr[0].split(',');
-	const size2 = array2.length;
-	var j;
-	var text2 = "";
-	var text3 = "2";
-	
-//	console.log("convergents check");
-	
-	for(j=1; j<= size2; j++)
-	{
-//		console.log(array2.slice(0, j));
-		var fraction = Complex(continuedFraction(array2.slice(0, j)));
-//		console.log("TEST",fraction,fraction.re,fraction.im);
-		if(fraction.im != 0)
-		{
-		text2 += fraction.re + "+" + fraction.im + "i"+ "<br>" ;
-		}
-		else
-		{
-		text2 += fraction.re+ "<br>" ;
-		}
-	}
-//	console.log(text2);
-	
-	document.getElementById("demo").innerHTML = text2;
-	
-	
-}
-
-function continuedFraction(array1) {
-	
-	const array = array1.reverse();
-	const size = array.length;
-//	console.log(array,size);
-    var fraction =Complex(array[0]);
-	var i;
-	
-//	console.log(Complex("4+3i"));
-//	console.log("array element",array[0],Complex(array[0]));
-//	console.log("current not quite convergent",fraction);
-//	console.log("testtest",i);
-	
-	if(size>1){
-//		console.log("TEST");
-		for(i = 1; i < size; i++)
-		{ 
-//			console.log("array element",array[i],Complex(array[i]));
-			fraction = Complex(array[i]).mul(fraction).add(-1).div(fraction);
-//			console.log("current convergent",fraction);
-		}
-	}
-//	console.log(fraction);
-	
-	return fraction;
-    	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function addAnddisplay() {
-
-    inputArr.push(input.value);
-
-    display.textContent = inputArr;   
-}
-function continuedFraction2() {
-	
-    inputArr.push(input.value);
-	const array1 = inputArr[0].split(',');
-	const array = array1.reverse();
-	const size = array.length;
-	console.log(array,size);
-    var fraction =Complex(array[0]);
-	var i;
-	
-	console.log(Complex("4+3i"));
-	console.log("array element",array[0],Complex(array[0]));
-	console.log("current not quite convergent",fraction);
-
-    for(i = 1; i < size; i++)
-    { 
-		console.log("array element",array[i],Complex(array[i]));
-        fraction = Complex(array[i]).mul(fraction).add(-1).div(fraction);
-		console.log("current convergent",fraction);
+    // Hide all tab contents
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
-	console.log(fraction);
-	
-	resultDisplay.textContent = fraction ;
-    	
+
+    // Remove "active" class from all tab links (unhighlight them)
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the selected tab content and add the "active" class to the clicked link
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+
+    // Save the selected tab in localStorage
+    localStorage.setItem("activeTab", tabName);
 }
+
+const initialInputValue = "1,2+i,3-2i,6";
+// Function to check for a saved tab and activate it on page load
+window.onload = function() {
+    var activeTab = localStorage.getItem("activeTab");
+    
+    // If there is no saved tab, default to Tab 1
+    if (!activeTab) {
+        activeTab = "Tab1";
+    }
+
+    // Hide all tab contents (CSS handles this by default)
+    // Show the saved active tab content immediately
+    document.getElementById(activeTab).style.display = "block";
+    
+    // Find and activate the correct tab link
+    var tablinks = document.getElementsByClassName("tablink");
+    for (var i = 0; i < tablinks.length; i++) {
+        // Check if this link corresponds to the active tab
+        if (tablinks[i].getAttribute("onclick").includes(activeTab)) {
+            tablinks[i].className += " active"; // Add "active" class only to the correct tab
+        } else {
+            tablinks[i].className = tablinks[i].className.replace(" active", ""); // Ensure all others are unhighlighted
+        }
+    }
+    document.getElementById("input").value = initialInputValue;
+};

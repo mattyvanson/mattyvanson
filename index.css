@@ -1,3 +1,41 @@
+/* Tab list styling */
+.tab-list {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style for tab links (as clickable items) */
+.tablink {
+    text-decoration: none;
+    color: blue;  /* Highlight tabs as links */
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Style for the active/selected tab (unhighlighted) */
+.tablink.active {
+    color: black;
+    cursor: default;
+}
+
+/* Dots between the tabs */
+.separator {
+    color: black;
+}
+
+/* Style the tab content sections */
+.tab-content {
+    display: none;
+}
+
+/* Show active tab content */
+.tab-content.active {
+    display: block;
+}
+
+
 
 .triangle-highlight {
 	fill: #ec008c;
@@ -21,58 +59,15 @@ table {
   border: 1px solid #dddddd;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
 }
 
-td, th {
-  text-align: center;
+td {
+  text-align: left;
   padding: 8px;
 }
 
-/*
-path{
-    fill:none;
-    stroke:black;
+th {
+  text-align: center;
+  padding: 8px;
 }
-
-
-path:hover{
-    fill:red;
-    stroke:black;
-}
-
-
-#l0:hover {
-  fill: gray;
-}
-
-#l16:hover {
-  fill: blue;
-}
-
-#l2:hover {
-  fill: green;
-}
-
-#l3:hover {
-  fill: yellow;
-}
-
-#l4:hover {
-  fill: violet;
-}
-
-#l12:hover {
-  fill: blue;
-}
-
-#l9:hover {
-  fill: purple;
-}
-
-#l2 {
-  fill: purple;
-}
-*/
-
 
