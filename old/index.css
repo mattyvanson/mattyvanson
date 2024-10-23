@@ -1,0 +1,77 @@
+
+.triangle-highlight {
+	fill: #ec008c;
+	opacity: 1;
+}
+.triangle-highlight3 {
+	fill: green;
+	opacity: .4;
+}
+.triangle-highlight2 {
+	fill: green;
+	opacity: .8;
+}
+.triangle-highlight4 {
+	fill: green;
+	opacity: .8;
+}
+
+
+table {
+  border: 1px solid #dddddd;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: center;
+  padding: 8px;
+}
+
+/*
+path{
+    fill:none;
+    stroke:black;
+}
+
+
+path:hover{
+    fill:red;
+    stroke:black;
+}
+
+
+#l0:hover {
+  fill: gray;
+}
+
+#l16:hover {
+  fill: blue;
+}
+
+#l2:hover {
+  fill: green;
+}
+
+#l3:hover {
+  fill: yellow;
+}
+
+#l4:hover {
+  fill: violet;
+}
+
+#l12:hover {
+  fill: blue;
+}
+
+#l9:hover {
+  fill: purple;
+}
+
+#l2 {
+  fill: purple;
+}
+*/
+
